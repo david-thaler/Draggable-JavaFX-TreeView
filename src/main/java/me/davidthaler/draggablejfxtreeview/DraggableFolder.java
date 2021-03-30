@@ -42,6 +42,15 @@ public class DraggableFolder implements DraggableObject {
     /**
      * {@inheritDoc}
      */
+    @Override
+    public String toString() {
+        return getText();
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
     public boolean canContainChildren() {
         return true;
     }

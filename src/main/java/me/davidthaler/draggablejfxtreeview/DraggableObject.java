@@ -5,13 +5,15 @@
  */
 package me.davidthaler.draggablejfxtreeview;
 
+import java.io.Serializable;
+
 /**
  * Draggable Object interface to be used to create TreeItems with for DraggableCellFactory.
  * This is used to supply items such as the text & if it can contain children.
  * If this interface is not used the text of the cell will just be the toString of the object
  * inside the TreeItem.
  */
-public interface DraggableObject {
+public interface DraggableObject extends Serializable {
 
     /**
      * The text to be displayed.
