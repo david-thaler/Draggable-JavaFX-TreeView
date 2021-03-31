@@ -9,6 +9,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import me.davidthaler.draggablejfxtreeview.DraggableCellFactory;
 import me.davidthaler.draggablejfxtreeview.DraggableChild;
@@ -32,12 +34,30 @@ public class ExampleApp extends Application {
         treeView.setRoot(root);
         treeView.setShowRoot(false);
 
+        // Folder icon image
+        Image folderImage = new Image(getClass().getResourceAsStream("material_io_folder.png"));
+        ImageView folderImageView1 = new ImageView(folderImage);
+        folderImageView1.setFitHeight(18.0);
+        folderImageView1.setFitWidth(18.0);
+        ImageView folderImageView2 = new ImageView(folderImage);
+        folderImageView2.setFitHeight(18.0);
+        folderImageView2.setFitWidth(18.0);
+        ImageView folderImageView3 = new ImageView(folderImage);
+        folderImageView3.setFitHeight(18.0);
+        folderImageView3.setFitWidth(18.0);
+        ImageView folderImageView4 = new ImageView(folderImage);
+        folderImageView4.setFitHeight(18.0);
+        folderImageView4.setFitWidth(18.0);
+        ImageView folderImageView5 = new ImageView(folderImage);
+        folderImageView5.setFitHeight(18.0);
+        folderImageView5.setFitWidth(18.0);
+
         // Create TreeItem objects to be displayed.
-        TreeItem folder1 = new TreeItem(new DraggableFolder("Folder 1"));
-        TreeItem folder2 = new TreeItem(new DraggableFolder("Folder 2"));
-        TreeItem folder3 = new TreeItem(new DraggableFolder("Folder 3"));
-        TreeItem folder4 = new TreeItem(new DraggableFolder("Folder 4"));
-        TreeItem folder5 = new TreeItem(new DraggableFolder("Folder 5"));
+        TreeItem folder1 = new TreeItem(new DraggableFolder("Folder 1"), folderImageView1);
+        TreeItem folder2 = new TreeItem(new DraggableFolder("Folder 2"), folderImageView2);
+        TreeItem folder3 = new TreeItem(new DraggableFolder("Folder 3"), folderImageView3);
+        TreeItem folder4 = new TreeItem(new DraggableFolder("Folder 4"), folderImageView4);
+        TreeItem folder5 = new TreeItem(new DraggableFolder("Folder 5"), folderImageView5);
         TreeItem child1 = new TreeItem(new DraggableChild("Child Item 1"));
         TreeItem child2 = new TreeItem(new DraggableChild("Child Item 2"));
         TreeItem child3 = new TreeItem(new DraggableChild("Child Item 3"));
@@ -66,7 +86,7 @@ public class ExampleApp extends Application {
 
         // Set JavaFX Scene and display.
         stage.setScene(new Scene(treeView));
-        stage.setWidth(1280);
+        stage.setWidth(500);
         stage.setHeight(720);
         stage.setTitle("Draggable JavaFX TreeView Example");
         stage.show();

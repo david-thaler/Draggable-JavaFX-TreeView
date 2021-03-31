@@ -13,6 +13,9 @@ import javafx.scene.control.cell.TextFieldTreeCell;
 import javafx.scene.input.*;
 import javafx.util.Callback;
 
+/**
+ * Draggable Cell Factory for TreeView. See README for usage instructions.
+ */
 public class DraggableCellFactory implements Callback<TreeView, TreeCell> {
 
     /**
