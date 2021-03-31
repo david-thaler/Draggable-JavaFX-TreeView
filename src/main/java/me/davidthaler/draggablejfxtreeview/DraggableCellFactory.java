@@ -49,8 +49,11 @@ public class DraggableCellFactory implements Callback<TreeView, TreeCell> {
      */
     private TreeItem draggedItem;
 
+
     /**
-     * {@inheritDoc}
+     * JavaFX Call method which is called when creating a new TreeCell to add to the TreeView
+     * @param treeView The TreeView to generate the TreeCell for.
+     * @return The TreeCell made.
      */
     public TreeCell call(final TreeView treeView) {
         TreeCell cell = new TextFieldTreeCell() {

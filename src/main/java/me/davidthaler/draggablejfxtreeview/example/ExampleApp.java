@@ -22,7 +22,9 @@ import me.davidthaler.draggablejfxtreeview.DraggableFolder;
 public class ExampleApp extends Application {
 
     /**
-     * {@inheritDoc}
+     * Starts the JavaFX Application.
+     * @param stage The JavaFX Stage.
+     * @throws Exception Never thrown, just there for interface requirement.
      */
     @Override
     public void start(Stage stage) throws Exception {
